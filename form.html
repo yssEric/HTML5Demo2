@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+</head>
+<body>
+
+<!-- action 表单提交到服务器的地址 -->
+<!-- method 提交到服务器的方式 GET | POST -->
+<!-- 所有的表单控件都有name属性，该属性用于在服务器端获取表单内容 -->
+<!-- 所有的表单控件都用value属性，该属性时服务器端获取的变得控件的值 -->
+<form action="save.jsp" method="get">
+    邮件：<input type="email"><br><br>
+    年龄：<input type="number"><br><br>
+
+    <!--checked 设置默认性别选择-->
+    <!--name="sex"  name属性设置相同  开启选项互斥性-->
+    性别：<input type="radio" name="sex" value="1" checked>男
+         <input type="radio" name="sex" value="0">女<br><br>
+    <!--select 选项列表-->
+    爱好：<select>
+             <option value="10" selected>篮球</option>
+             <option value="11">乒乓球</option>
+             <option value="12">足球</option>
+         </select><br><br>
+    网站：<input type="url"><br><br>
+    温度：<input type="range"><br><br>
+    颜色：<input type="color"><br><br>
+    账号：<input type="text" name="userName" autofocus placeholder="请输入手机号码"><br><br>
+    密码：<input type="password" name="password" maxlength="6" autofocus placeholder="请输入六位数字密码"><br><br>
+    留言：<br>
+    <!-- textarea 控件是没有value属性的-->
+    <!--style="resize:none" textarea 控件禁止拉伸-->
+    <textarea cols="30" rows="10" style="resize:none">请输入想要表达的内容</textarea><br><br>
+
+    <!--html4 button  写法-->
+    <input type="button" value="我是一个普通的按钮">
+    <input type="submit" value="我是一个表单提交按钮">
+    <input type="reset" value="我是一个重置按钮"><br><br>
+
+    <!--html5 button  写法 (写在form内)-->
+    <!--不添加类型 为一个表单提交按钮 反正为一个正常按钮-->
+    <button>我是一个表单提交按钮</button>
+    <button type="button">我是一个正常按钮</button>
+    <button type="submit">我是一个表单提交按钮</button>
+    <button type="reset">我是一个重置按钮</button>
+
+</form>
+
+<!--html5 button  写法 (写在form外)-->
+<btton>我是一个普通的按钮</btton>
+
+</body>
+</html>
